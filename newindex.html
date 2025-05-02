@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Business Growth Seminar 2025</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #004aad, #00b8ff);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-weight: 300;
+      font-size: 1.4rem;
+    }
+
+    #countdown {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      margin-top: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    h3 {
+      color: #004aad;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 10px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 15px 40px;
+        margin: 0 auto;
+        font-size: 1rem;
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(135deg, #25d366, #128C7E);
+        border: none;
+        border-radius: 50px;
+        box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+      }
+      
+      .btn:hover {
+        background: linear-gradient(135deg, #128C7E, #075E54);
+        transform: scale(1.05);
+        box-shadow: 0 12px 24px rgba(18, 140, 126, 0.5);
+      }
+      .rsvp {
+        text-align: center;
+      }
+      
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero h2, #countdown {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Business Growth & Digital Marketing Seminar 2025</h1>
+    <h2>Learn the latest strategies to boost your business in the digital world</h2>
+    <div id="countdown">Loading countdown...</div>
+  </section>
+
+  <!-- Event Details -->
+  <section>
+    <h3>About the Seminar</h3>
+    <p>
+      This exclusive seminar is designed for entrepreneurs, small business owners, and marketing professionals who want to take their businesses to the next level. 
+      Learn from industry experts about growth hacking, digital ads, personal branding, and more!
+    </p>
+
+    <h3>Event Details</h3>
+    <p><strong>Date:</strong> April 30, 2025</p>
+    <p><strong>Time:</strong> 4:00 PM IST</p>
+    <p><strong>Location:</strong> Hotel Taj, Gomti Nagar, Lucknow, India</p>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map">
+    <h3>Find Us Here</h3>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=PLACE_ID"
+      allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- RSVP Section -->
+  <section class="rsvp">
+    <h3>Reserve Your Seat Now</h3>
+    <p>Limited seats available! Confirm your spot by clicking below:</p>
+    <a href="https://wa.me/YOUR_PHONE_NUMBER?text=I'm%20attending%20the%20seminar!" class="btn">RSVP via WhatsApp</a>
+  </section>
+
+  <script>
+    function countdownTimer() {
+      const eventDate = new Date("April 30, 2025 16:00:00").getTime();
+      const countdown = document.getElementById("countdown");
+
+      setInterval(() => {
+        const now = new Date().getTime();
+        const remaining = eventDate - now;
+
+        if (remaining <= 0) {
+          countdown.textContent = "The event is live now!";
+          return;
+        }
+
+        const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+
+        countdown.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      }, 1000);
+    }
+
+    countdownTimer();
+  </script>
+</body>
+</html>
